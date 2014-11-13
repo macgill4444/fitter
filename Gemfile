@@ -40,6 +40,8 @@ gem 'unicorn'
 
 gem 'bundler'
 
+gem 'annotate'
+
 gem 'haml'
 gem 'erb2haml'
 

@@ -13,6 +13,7 @@
     %ul.nav.navbar-nav.navbar-right
       - if defined?(Devise)
         - if user_signed_in?
+          %li= link_to "Profile", profile_path
           %li.dropdown
             %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
               Account
