@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  sport: MyString
+  start_time: 2014-11-13 02:49:06
+  end_time: 2014-11-13 02:49:06
+
+two:
+  user_id: 
+  sport: MyString
+  start_time: 2014-11-13 02:49:06
+  end_time: 2014-11-13 02:49:06
