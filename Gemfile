@@ -30,7 +30,7 @@ gem 'spring',        group: :development
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -39,6 +39,10 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'bundler'
+
+gem 'haml'
+
+gem 'rails_12factor'
 
 gem 'acts_as_votable', github: 'ryanto/acts_as_votable'
 gem 'activeadmin', github: 'gregbell/active_admin'
