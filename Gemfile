@@ -41,6 +41,7 @@ gem 'unicorn'
 gem 'bundler'
 
 gem 'haml'
+gem 'erb2haml'
 
 gem 'rails_12factor'
 
