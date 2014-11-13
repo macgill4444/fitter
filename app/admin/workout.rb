@@ -1,4 +1,5 @@
 ActiveAdmin.register Workout do
+  permit_params :sport, :start_time, :end_time
 
 
   # See permitted parameters documentation:
