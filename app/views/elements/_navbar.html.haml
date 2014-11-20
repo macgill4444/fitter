@@ -1,5 +1,4 @@
 %nav.navbar.navbar-default{:role => "navigation"}
-  / Brand and toggle get grouped for better mobile display
   .navbar-header
     %button.navbar-toggle{"data-target" => "#navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
       %span.sr-only Toggle navigation
@@ -7,7 +6,6 @@
       %span.icon-bar
       %span.icon-bar
     = link_to "Fitter", defined?(root_path) ? root_path : "#", class: "navbar-brand"
-  / Collect the nav links, forms, and other content for toggling
   #navbar-collapse-1.collapse.navbar-collapse
     %ul.nav.navbar-nav
     %ul.nav.navbar-nav.navbar-right
@@ -25,4 +23,3 @@
         - else
           %li= link_to "Login", new_user_session_path
           %li= link_to "Sign Up", new_user_registration_path
-  / /.navbar-collapse

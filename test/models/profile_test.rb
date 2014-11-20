@@ -1,18 +1,18 @@
 # == Schema Information
 #
-# Table name: posts
+# Table name: profiles
 #
 #  id         :integer          not null, primary key
-#  user_id    :integer
-#  content    :text
-#  title      :string(255)
+#  bio        :text
+#  interests  :text
 #  created_at :datetime
 #  updated_at :datetime
+#  user_id    :integer
 #
 
 require 'test_helper'
 
-class PostTest < ActiveSupport::TestCase
+class ProfileTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

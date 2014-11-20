@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'profile' => 'profiles#index'
-
   get 'landings/index'
 
   devise_for :users, controllers: {registrations: "users/registrations", sessions: "users/sessions", passwords: "users/passwords"}, skip: [:sessions, :registrations]
@@ -11,6 +9,10 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'landings#index'
+
+  get 'profile' => 'profiles#index'
+  post 'new_post' => 'profiles#new_post'
+  post 'new_workout' => 'profiles#new_workout'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

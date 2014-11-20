@@ -1,2 +1,30 @@
 %h1 
 	= "Welcome #{current_user.first_name} to your personal profile" 
+.container
+	%h3
+		= "Posts"
+	.row
+		.col-md-8.col-md-offset-2.post-section.bordered
+			%button.btn.btn-primary.btn-lg{'data-toggle' => "modal", 'data-target' => '#postModal', :type => "button"}
+				= "New post"
+			- current_user.posts.each  do | post |
+				.post
+					%h4
+						= "#{post.title} by #{post.user.first_name} #{post.user.last_name} :"	
+					%h6.post-content
+						= post.content
+%hr/
+.container
+	%h3
+		= "Workouts"
+	.row.workout-section
+		.col-md-8.col-md-offset-2.post-section.bordered
+			%button.btn.btn-primary.btn-lg{'data-toggle' => "modal", 'data-target' => '#workoutModal', :type => "button"}
+				= "New workout"
+			- current_user.workouts.each  do | workout |
+				.workout
+					%h4
+						= "#{workout.sport} began at #{workout.start_time} and ended at #{workout.end_time}"
+
+= render 'elements/new_post_form'
+= render 'elements/new_workout_form'

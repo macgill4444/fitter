@@ -1,0 +1,24 @@
+#workoutModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+	.modal-dialog
+		.modal-content
+			.modal-header
+				%button.close{"data-dismiss" => "modal", :type => "button"}
+					%span{"aria-hidden" => "true"} ×
+					%span.sr-only Close
+				%h4#myModalLabel.modal-title New Workout
+			.modal-body
+				= form_for @new_workout, url: new_workout_path do |f|
+					.form-group
+						= f.label :sport, class: "control-label col-md-4"
+						.col-md-8
+							= f.text_field :sport, class: "text-field form-control", html: {spellcheck: "false"}
+					.form-group
+						= f.label :start_time, class: "control-label col-md-4"
+						.col-md-8
+							= f.text_area :start_time, class: "text-field form-control", html: {spellcheck: "false"}
+					.form-group
+						= f.label :end_time, class: "control-label col-md-4"
+						.col-md-8
+							= f.text_area :end_time, class: "text-field form-control", html: {spellcheck: "false"}
+					.form-group
+						= f.submit "SUBMIT", class: "btn btn-default form-control"
